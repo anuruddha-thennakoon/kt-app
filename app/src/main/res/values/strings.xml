@@ -3,4 +3,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="admission_no">Admission No</string>
+    <string name="enter_here">enter here</string>
+    <string name="nid_number">NID Number</string>
+    <string name="patient_data">Patient Data</string>
+    <string name="registering_a_patient">Registering a Patient</string>
+    <string name="name">Name (First Name, Surname)</string>
+    <string name="dob">Date of Birth</string>
+    <string name="gender">Gender</string>
 </resources>

@@ -4,8 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg"
+    android:background="@drawable/bg_new"
     tools:context=".ui.main.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C1081C4A"/>
 
     <com.variant.ktapp.widgets.ToolBar
         android:id="@+id/toolBar"

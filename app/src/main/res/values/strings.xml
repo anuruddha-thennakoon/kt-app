@@ -39,4 +39,6 @@
     <string name="content">Content</string>
     <string name="slough">Slough</string>
     <string name="granulation">Granulation</string>
+    <string name="developed_by">developed by Variant Innovations</string>
+    <string name="forgotten_password"><u>Forgotten Password Report a problem or need help?</u></string>
 </resources>

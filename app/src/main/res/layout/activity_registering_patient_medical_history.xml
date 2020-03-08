@@ -1,9 +1,309 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".ui.register_patient.RegisteringPatientMedicalHistory">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="@string/registering_a_patient"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvTitle"
+        android:layout_margin="25dp"
+        android:background="@drawable/white_bg">
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/medical_history"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llButton"
+            android:layout_below="@id/tvSubTitle">
+
+            <LinearLayout
+                android:id="@+id/llContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/inner_white_bg"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/diabetes_mellitus"
+                            android:textColor="@color/textDarkBlue"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/chIHD"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="IHD"
+                                    android:textColor="@color/textAsh" />
+
+                                <CheckBox
+                                    android:id="@+id/chHTN"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="HTN"
+                                    android:textColor="@color/textAsh" />
+
+                                <CheckBox
+                                    android:id="@+id/chIHD2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="IHD"
+                                    android:textColor="@color/textAsh" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/chCKD"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="CKD"
+                                    android:textColor="@color/textAsh" />
+
+                                <CheckBox
+                                    android:id="@+id/chCVA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="CVA"
+                                    android:textColor="@color/textAsh" />
+
+                                <CheckBox
+                                    android:id="@+id/chBA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="BA"
+                                    android:textColor="@color/textAsh" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/inner_white_bg"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/allergies"
+                            android:textColor="@color/textDarkBlue"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/chPenicillin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="Penicillin"
+                                    android:textColor="@color/textAsh" />
+
+                                <CheckBox
+                                    android:id="@+id/chSulphur"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="Sulphur Drugs"
+                                    android:textColor="@color/textAsh" />
+
+                                <CheckBox
+                                    android:id="@+id/chBetiadine"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="Betiadine"
+                                    android:textColor="@color/textAsh" />
+
+                                <CheckBox
+                                    android:id="@+id/chOther"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="Other"
+                                    android:textColor="@color/textAsh" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/chPlaster"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="Plaster"
+                                    android:textColor="@color/textAsh" />
+
+                                <CheckBox
+                                    android:id="@+id/chFood"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="Food"
+                                    android:textColor="@color/textAsh" />
+
+                                <CheckBox
+                                    android:id="@+id/chDie"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="Die"
+                                    android:textColor="@color/textAsh" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="enter here"
+                            android:inputType="text"
+                            android:paddingStart="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/llButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_btn"
+                android:onClick="onClick"
+                android:text="@string/continue_text"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_line_btn"
+                android:text="@string/cancel"
+                android:textColor="@color/textDarkBlue" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

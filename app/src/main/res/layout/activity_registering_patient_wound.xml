@@ -1,9 +1,724 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".ui.register_patient.RegisteringPatientWound">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="@string/registering_a_patient"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvTitle"
+        android:layout_margin="25dp"
+        android:background="@drawable/white_bg">
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/record_wound_details"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llButton"
+            android:layout_below="@id/tvSubTitle">
+
+            <LinearLayout
+                android:id="@+id/llContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/inner_white_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:background="@drawable/blue_line_header"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/tvWoundTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Wound 1"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:id="@+id/ivRemove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/remove" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/site"
+                            android:textColor="@color/textDarkBlue"
+                            android:textSize="16sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioLeft"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="47dp"
+                                    android:layout_weight="1"
+                                    android:checked="true"
+                                    android:text="Leg ulcer"
+                                    android:textColor="@color/textAsh"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingStart="10dp"
+                                        android:text="Right"
+                                        android:textColor="@color/textAsh" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingStart="10dp"
+                                        android:text="Left"
+                                        android:textColor="@color/textAsh" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/textAsh" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioRight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="47dp"
+                                    android:layout_weight="1"
+                                    android:checked="false"
+                                    android:text="Leg ulcer"
+                                    android:textColor="@color/textAsh"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingStart="10dp"
+                                        android:text="Right"
+                                        android:textColor="@color/textAsh" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingStart="10dp"
+                                        android:text="Left"
+                                        android:textColor="@color/textAsh" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/textAsh" />
+
+                            <RadioButton
+                                android:id="@+id/radioOther"
+                                android:layout_width="wrap_content"
+                                android:layout_height="47dp"
+                                android:layout_weight="1"
+                                android:checked="false"
+                                android:text="@string/other"
+                                android:textColor="@color/textAsh"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/textAsh" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/left_foot" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/left_foot" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/body" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/add_wound_image"
+                            android:textColor="@color/textDarkBlue"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:scaleType="center"
+                            android:src="@drawable/add" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/wound_size"
+                            android:textColor="@color/textDarkBlue"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="size of the wound"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingStart="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/content"
+                        android:textColor="@color/textDarkBlue"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/slough"
+                                android:textColor="@color/textAsh"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <SeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42dp"
+                                    android:layout_weight="1"
+                                    android:max="100"
+                                    android:progress="50" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:text="50%"
+                                    android:textColor="@color/textAsh"
+                                    android:textSize="17sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/granulation"
+                                android:textColor="@color/textAsh"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <SeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42dp"
+                                    android:layout_weight="1"
+                                    android:max="100"
+                                    android:progress="50" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:text="50%"
+                                    android:textColor="@color/textAsh"
+                                    android:textSize="17sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/other"
+                            android:textColor="@color/textDarkBlue"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="remarks here"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingStart="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/osteomyelitis"
+                            android:textColor="@color/textDarkBlue"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="PTB + / -"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingStart="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/type"
+                            android:textColor="@color/textDarkBlue"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/chNuropathy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="Nuropathy"
+                                android:textColor="@color/textAsh" />
+
+                            <CheckBox
+                                android:id="@+id/chDeformity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="Deformity"
+                                android:textColor="@color/textAsh" />
+
+                            <CheckBox
+                                android:id="@+id/chPVD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="PVD"
+                                android:textColor="@color/textAsh" />
+
+                            <CheckBox
+                                android:id="@+id/chVaricose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="Varicose"
+                                android:textColor="@color/textAsh" />
+
+                            <CheckBox
+                                android:id="@+id/chLymph"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="Lymph edema"
+                                android:textColor="@color/textAsh" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/complications"
+                            android:textColor="@color/textDarkBlue"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/chCellulitis"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="Cellulitis"
+                                android:textColor="@color/textAsh" />
+
+                            <CheckBox
+                                android:id="@+id/chOsteomyelitis"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="Osteomyelitis"
+                                android:textColor="@color/textAsh" />
+
+                            <CheckBox
+                                android:id="@+id/chScpsis"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="Scpsis"
+                                android:textColor="@color/textAsh" />
+
+                            <CheckBox
+                                android:id="@+id/chMRSA"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="MRSA"
+                                android:textColor="@color/textAsh" />
+
+                            <CheckBox
+                                android:id="@+id/chESBL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="ESBL"
+                                android:textColor="@color/textAsh" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llInnerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_btn"
+                        android:text="@string/save_wound"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_line_btn"
+                        android:text="@string/cancel"
+                        android:textColor="@color/textDarkBlue" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:layout_below="@+id/llContent"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_line_header"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/tvAddWound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:drawableStart="@drawable/add"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Add Another Wound Record"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/llButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_btn"
+                android:text="@string/create_profile"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/need_help"
+                android:textColor="@color/textAsh" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

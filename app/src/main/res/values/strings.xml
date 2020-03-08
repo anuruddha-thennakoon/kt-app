@@ -11,4 +11,6 @@
     <string name="name">Name (First Name, Surname)</string>
     <string name="dob">Date of Birth</string>
     <string name="gender">Gender</string>
+    <string name="developed_by">developed by Variant Innovations</string>
+    <string name="forgotten_password"><u>Forgotten Password Report a problem or need help?</u></string>
 </resources>

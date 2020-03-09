@@ -8,6 +8,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/headerContainer"
         android:layout_width="match_parent"
         android:layout_height="122dp"
         android:background="@drawable/dashboard_light_blue_bg">
@@ -57,5 +58,11 @@
         </RelativeLayout>
 
     </RelativeLayout>
+
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b5eceef7"
+        android:layout_below="@+id/headerContainer"/>
 
 </RelativeLayout>

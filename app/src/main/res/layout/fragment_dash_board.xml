@@ -59,10 +59,10 @@
 
     </RelativeLayout>
 
-    <view
+    <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#b5eceef7"
+        android:layout_height="2dp"
+        android:background="#d1dcffff"
         android:layout_below="@+id/headerContainer"/>
 
 </RelativeLayout>

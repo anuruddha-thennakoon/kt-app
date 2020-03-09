@@ -14,19 +14,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.login.LoginActivity"
-            android:theme="@style/NormalActivity"/>
+            android:theme="@style/NormalActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".ui.splash.SplashActivity"
-            android:theme="@style/fullScreenActivity">
+            android:theme="@style/fullScreenActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.register_patient.RegisteringPatientWound" />
-        <activity android:name=".ui.register_patient.RegisteringPatientMedicalHistory" />
-        <activity android:name=".ui.register_patient.RegisteringPatientInfo" />
-        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.register_patient.RegisteringPatientWound"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.register_patient.RegisteringPatientMedicalHistory"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.register_patient.RegisteringPatientInfo"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.main.MainActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

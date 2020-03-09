@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg_new"
-    tools:context=".ui.main.MainActivity">
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:layout_width="match_parent"
+    <include layout="@layout/layout_main" />
+
+
+    <include
+        layout="@layout/layout_drawer"
+        android:layout_width="320dp"
         android:layout_height="match_parent"
-        android:background="#C1081C4A"/>
+        android:layout_gravity="left" />
 
-    <com.variant.ktapp.widgets.ToolBar
-        android:id="@+id/toolBar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:showDots="false" />
 
-    <FrameLayout
-        android:id="@+id/fragmentHolder"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolBar"
-        android:layout_marginBottom="16dp" />
-
-</RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

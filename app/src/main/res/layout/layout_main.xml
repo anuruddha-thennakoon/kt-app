@@ -4,27 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg_new"
     tools:context=".ui.main.MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#C1081C4A"/>
-
-    <com.variant.ktapp.widgets.ToolBar
-        android:id="@+id/toolBar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginBottom="22dp"
-        android:layout_marginEnd="29dp"
-        app:showDots="false" />
 
     <FrameLayout
         android:id="@+id/fragmentHolder"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolBar"/>
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

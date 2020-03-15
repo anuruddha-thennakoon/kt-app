@@ -41,4 +41,5 @@
     <string name="granulation">Granulation</string>
     <string name="developed_by">developed by Variant Innovations</string>
     <string name="forgotten_password"><u>Forgotten Password Report a problem or need help?</u></string>
+    <string name="is_supported_screen">false</string>
 </resources>
